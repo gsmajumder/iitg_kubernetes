@@ -9,21 +9,21 @@ RUN apt-get update
 #
 RUN apt-get install -y wget vim htop fish datamash graphviz libgraphviz-dev
 
-RUN pip3 --no-cache-dir install ipython pandas numpy
+RUN pip --no-cache-dir install ipython pandas numpy
 
-RUN pip3 --no-cache-dir install docopt joblib natsort scipy
+RUN pip --no-cache-dir install docopt joblib natsort scipy
 
-RUN pip3 --no-cache-dir install tqdm keras matplotlib librosa scikit-learn
+RUN pip --no-cache-dir install tqdm keras matplotlib librosa scikit-learn
 
-RUN pip3 --no-cache-dir install dill bleach namedtupled
+RUN pip --no-cache-dir install dill bleach namedtupled
 
-RUN pip3 --no-cache-dir install PyEMD
+RUN pip --no-cache-dir install PyEMD
 
-RUN pip3 --no-cache-dir install tensorflow
+RUN pip --no-cache-dir install tensorflow
 
-RUN pip3 --no-cache-dir install networkx pathlib pygraphviz
+RUN pip --no-cache-dir install networkx pathlib pygraphviz
 
-RUN pip3 --no-cache-dir install transformers
+RUN pip --no-cache-dir install transformers
 
 RUN apt-get install -y git
 
