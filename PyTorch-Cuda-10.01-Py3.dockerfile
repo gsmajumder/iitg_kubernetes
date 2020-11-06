@@ -1,8 +1,9 @@
-FROM pytorch/pytorch:1.6.0-cuda10.1-cudnn7-runtime
+FROM tensorflow/tensorflow:latest-gpu-py3
+#FROM pytorch/pytorch:1.6.0-cuda10.1-cudnn7-runtime
 
 LABEL maintainer="gourisankar@iitg.ac.in"
 LABEL version="0.1"
-LABEL description="Image for PyTorch Cuda 10.1, transformers and other required libraries for NLP and deep learning "
+LABEL description="Image for PyTorch & tensorflow latest Cuda 10.1, transformers and other required libraries for NLP and deep learning "
 
 RUN apt-get update
 
@@ -19,7 +20,7 @@ RUN pip --no-cache-dir install dill bleach namedtupled
 
 RUN pip --no-cache-dir install PyEMD
 
-RUN pip --no-cache-dir install tensorflow
+RUN pip --no-cache-dir install torch==1.7.0+cu101 torchvision==0.8.1+cu101 torchaudio==0.7.0 -f https://download.pytorch.org/whl/torch_stable.html
 
 RUN pip --no-cache-dir install networkx pathlib pygraphviz
 
