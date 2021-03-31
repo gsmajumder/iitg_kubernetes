@@ -1,5 +1,5 @@
-FROM tensorflow/tensorflow:latest-gpu-py3
-#FROM pytorch/pytorch:1.6.0-cuda10.1-cudnn7-runtime
+#FROM tensorflow/tensorflow:latest-gpu-py3
+FROM pytorch/pytorch:1.6.0-cuda10.1-cudnn7-runtime
 
 LABEL maintainer="gourisankar@iitg.ac.in"
 LABEL version="0.1"
